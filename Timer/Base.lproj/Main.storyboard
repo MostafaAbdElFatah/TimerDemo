@@ -1,25 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIO-6a-M1W">
+                                <rect key="frame" x="113" y="95" width="94" height="71"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="6Lb-wI-90f"/>
+                                    <constraint firstAttribute="width" constant="94" id="aMs-zF-0DO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyT-jh-fcW">
+                                <rect key="frame" x="113" y="197" width="89" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="Pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SEh-xV-puY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPf-Ge-Nq0">
+                                <rect key="frame" x="9" y="197" width="84" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fPf-Ge-Nq0" secondAttribute="height" multiplier="14:5" id="OtQ-ZR-Fod"/>
+                                    <constraint firstAttribute="width" constant="84" id="eyJ-0n-6RD"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sHV-3F-dIn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-ej-mCT">
+                                <rect key="frame" x="229" y="197" width="71" height="30"/>
+                                <animations/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fPG-ej-mCT" secondAttribute="height" multiplier="71:30" id="YXf-W2-ph5"/>
+                                    <constraint firstAttribute="width" constant="71" id="dUD-to-sur"/>
+                                </constraints>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="Reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XfY-jv-G2f"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.15004888407284234" green="1" blue="0.058657440208543354" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fPf-Ge-Nq0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="B1k-SQ-Zx8"/>
+                            <constraint firstItem="EyT-jh-fcW" firstAttribute="baseline" secondItem="fPG-ej-mCT" secondAttribute="baseline" id="CUM-gB-oKA"/>
+                            <constraint firstItem="ZIO-6a-M1W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dmr-c3-hAF"/>
+                            <constraint firstItem="EyT-jh-fcW" firstAttribute="leading" secondItem="ZIO-6a-M1W" secondAttribute="leading" id="NdL-ov-vf9"/>
+                            <constraint firstItem="fPG-ej-mCT" firstAttribute="leading" secondItem="EyT-jh-fcW" secondAttribute="trailing" constant="27" id="Y9x-zj-XzS"/>
+                            <constraint firstItem="ZIO-6a-M1W" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="75" id="f0v-sb-9ra"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fPG-ej-mCT" secondAttribute="trailing" constant="4" id="gVu-aZ-vBc"/>
+                            <constraint firstItem="fPf-Ge-Nq0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="177" id="lmG-mO-ruJ"/>
+                            <constraint firstItem="fPf-Ge-Nq0" firstAttribute="baseline" secondItem="fPG-ej-mCT" secondAttribute="baseline" id="zK8-cE-uwz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CounterLabel" destination="ZIO-6a-M1W" id="OCI-gd-1CM"/>
+                        <outlet property="Pause_btn" destination="EyT-jh-fcW" id="X3V-yR-WSN"/>
+                        <outlet property="Reset_btn" destination="fPG-ej-mCT" id="WlE-bI-ZhQ"/>
+                        <outlet property="Start_btn" destination="fPf-Ge-Nq0" id="fuk-Dl-Lqq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="153" y="274"/>
         </scene>
     </scenes>
 </document>

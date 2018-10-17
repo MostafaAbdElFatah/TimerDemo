@@ -1,10 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,12 +20,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIO-6a-M1W">
-                                <rect key="frame" x="113" y="95" width="94" height="71"/>
-                                <animations/>
+                                <rect key="frame" x="140.5" y="95" width="94" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="71" id="6Lb-wI-90f"/>
                                     <constraint firstAttribute="width" constant="94" id="aMs-zF-0DO"/>
@@ -31,8 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyT-jh-fcW">
-                                <rect key="frame" x="113" y="197" width="89" height="30"/>
-                                <animations/>
+                                <rect key="frame" x="140.5" y="197" width="116.5" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Pause"/>
                                 <connections>
@@ -41,11 +43,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPf-Ge-Nq0">
                                 <rect key="frame" x="9" y="197" width="84" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fPf-Ge-Nq0" secondAttribute="height" multiplier="14:5" id="OtQ-ZR-Fod"/>
-                                    <constraint firstAttribute="width" constant="84" id="eyJ-0n-6RD"/>
                                 </constraints>
                                 <state key="normal" title="Start"/>
                                 <connections>
@@ -53,12 +53,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-ej-mCT">
-                                <rect key="frame" x="229" y="197" width="71" height="30"/>
-                                <animations/>
+                                <rect key="frame" x="284" y="197" width="71" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="fPG-ej-mCT" secondAttribute="height" multiplier="71:30" id="YXf-W2-ph5"/>
-                                    <constraint firstAttribute="width" constant="71" id="dUD-to-sur"/>
                                 </constraints>
                                 <state key="normal" title="Reset"/>
                                 <connections>
@@ -66,9 +64,9 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.15004888407284234" green="1" blue="0.058657440208543354" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.15004888407284234" green="1" blue="0.058657440208543354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fPf-Ge-Nq0" secondAttribute="trailingMargin" id="2XM-qN-Bf6"/>
                             <constraint firstItem="fPf-Ge-Nq0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="B1k-SQ-Zx8"/>
                             <constraint firstItem="EyT-jh-fcW" firstAttribute="baseline" secondItem="fPG-ej-mCT" secondAttribute="baseline" id="CUM-gB-oKA"/>
                             <constraint firstItem="ZIO-6a-M1W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dmr-c3-hAF"/>

@@ -13,36 +13,36 @@ class ViewController: UIViewController {
     //***************** variables ****************************
     
     var Counter = 0
-    var timer = NSTimer()
+    var timer = Timer()
     @IBOutlet weak var CounterLabel: UILabel!
     @IBOutlet weak var Pause_btn: UIButton!
     @IBOutlet weak var Start_btn: UIButton!
     @IBOutlet weak var Reset_btn: UIButton!
     
     //*************** functions ***************************
-    @IBAction func Start(sender: UIButton) {
-        Pause_btn.enabled = true
-        Reset_btn.enabled = true
-        Start_btn.enabled = false
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "timerAction" , userInfo: nil, repeats: true)
+    @IBAction func Start(_ sender: UIButton) {
+        Pause_btn.isEnabled = true
+        Reset_btn.isEnabled = true
+        Start_btn.isEnabled = false
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.timerAction) , userInfo: nil, repeats: true)
     }
     
-    @IBAction func Pause(sender: UIButton) {
+    @IBAction func Pause(_ sender: UIButton) {
         timer.invalidate()
-        Start_btn.enabled = true
-        Pause_btn.enabled = false
+        Start_btn.isEnabled = true
+        Pause_btn.isEnabled = false
     }
     
-    @IBAction func Reset(sender: AnyObject) {
-        Start_btn.enabled = true
-        Pause_btn.enabled = false
-        Reset_btn.enabled = false
+    @IBAction func Reset(_ sender: AnyObject) {
+        Start_btn.isEnabled = true
+        Pause_btn.isEnabled = false
+        Reset_btn.isEnabled = false
         
         timer.invalidate()
         Counter = 0
     }
     
-    func timerAction() {
+    @objc func timerAction() {
         Counter += 1
         CounterLabel.text = "\(Counter)"
     }
@@ -50,15 +50,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        Pause_btn.enabled = false
-        Reset_btn.enabled = false
+        Pause_btn.isEnabled = false
+        Reset_btn.isEnabled = false
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
